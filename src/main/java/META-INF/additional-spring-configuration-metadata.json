@@ -1,0 +1,54 @@
+{
+  "properties": [
+    {
+      "name": "boilerplate.database-nm",
+      "type": "java.lang.String",
+      "description": "데이터베이스명"
+    },
+    {
+      "name": "boilerplate.package-nm",
+      "type": "java.lang.String",
+      "description": "업무별 구분자"
+    },
+    {
+      "name": "boilerplate.table-nm",
+      "type": "java.lang.String",
+      "description": "지정한 테이블의 crud query를 생성한다."
+    },
+    {
+      "name": "boilerplate.sequence-nm",
+      "type": "java.lang.String",
+      "description": "unique key를 조회하기 위한 시퀀스"
+    },
+    {
+      "name": "boilerplate.mybatis-path",
+      "type": "java.lang.String",
+      "description": "mybatis파일이 생성 될 root 경로"
+    },
+    {
+      "name": "boilerplate.java-path",
+      "type": "java.lang.String",
+      "description": "java 파일이 생성 될 root 경로"
+    },
+    {
+      "name": "boilerplate.project-package",
+      "type": "java.lang.String",
+      "description": "java 파일의 prefix package"
+    },
+    {
+      "name": "boilerplate.jsp-path",
+      "type": "java.lang.String",
+      "description": "jsp 파일이 생성 될 root 경로"
+    },
+    {
+      "name": "boilerplate.dbms",
+      "type": "java.lang.String",
+      "description": "dbms 종류 예) oracle, postgre, mysql 등"
+    },
+    {
+      "name": "boilerplate.generate-root-path",
+      "type": "java.lang.String",
+      "description": "자동 생성되는 루트 경로"
+    }
+  ]
+}
