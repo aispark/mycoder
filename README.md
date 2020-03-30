@@ -16,37 +16,67 @@
 # mycoder
 
 spring mvc boilerplate code를 생성해 주는 도구 입니다.  
-gsipa 기반 template이 제공 됩니다.  
-template을 참고하여 각각의 프로젝트에 맞게 수정 후 사용하세요.
+자동생성할 template을 작성하여야 합니다.
+template의 \${변수}는 application-{profile}.properties에 정의한 데이터로 치환됩니다.
 
 # resources
 
-application.properties 치환 되어야 할 프로러티를 정의 합니다.
+application.properties 공통 프로퍼티
 
 ```
-#template패키지를 나누는 때와 table의 메타 데이터를 조회 한때 사용 된다.
-boilerplate.database-nm
+# profile 명
+spring.profiles.active=gsipa
 
-#업무명칭 url의 prefix 및 class명에 사용 된다.
-boilerplate.package-nm
+# spring boot properties
+server.port=5000
+spring.datasource.hikari.maximum-pool-size=4
+spring.mvc.view.prefix=/WEB-INF/views
+spring.mvc.view.suffix=.jsp
 
-#boilerplate를 생성할 테이블
-boilerplate.table-nm
+# logging
+logging.level.com.barasan.mycoder=info
 
-#대상 테이블의 시퀀스명
-boilerplate.sequence-nm
+# 로그 구문강조 기능
+spring.output.ansi.enabled=ALWAYS
+```
 
-#mybatis boilerplate가 위치할 root 경로
-boilerplate.mybatis-path
+application-{profile}.properties 치환 되어야 할 프로러티를 정의 합니다.
 
-#java boilerplate가 위치할 root 경로
-boilerplate.java-path
+```
+# db connection 정보
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
 
-#java의 prefix package
-boilerplate.project-package
+#패키지명, 메소드명, class명을 정의할 때 사용 된다.
+boilerplate.package-nm=
 
-#jsp boilerplate가 위치할 root 경로
-boilerplate.jsp-path
+# 자동생성 루트 경로
+boilerplate.generate-root-path=
+
+# dbms 종류 예) oracle, postgre, mysql 등등
+boilerplate.dbms=
+
+# 테이블 메타 데이터 조회시 조건으로 사용 된다.
+boilerplate.database-nm=
+
+# 지정한 테이블의 crud query를 생성한다.
+boilerplate.table-nm=
+
+# unique key를 조회하기 위한 시퀀스
+boilerplate.sequence-nm=
+
+# mybatis파일이 생성 될 root 경로
+boilerplate.mybatis-path=
+
+# java 파일이 생성 될 root 경로
+boilerplate.java-path=
+
+# jsp 파일이 생성 될 root 경로
+boilerplate.jsp-path=
+
+# java 파일의 prefix package
+boilerplate.project-package=
 ```
 
 # test
